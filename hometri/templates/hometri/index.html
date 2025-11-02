@@ -1,0 +1,413 @@
+{% extends 'hometri/base.html' %}
+{% load static %}
+{% block content %}
+<div class="slider-1 pos-relative slider-overlay">
+    <div class="bend niceties preview-1">
+        <div id="ensign-nivoslider-3" class="slides">
+            <img src="{% static 'hometri/images/slider/1.jpg' %}" alt="" title="#slider-direction-1" />
+            <img src="{% static 'hometri/images/slider/2.jpg' %}" alt="" title="#slider-direction-2" />
+            <img src="{% static 'hometri/images/slider/1.jpg' %}" alt="" title="#slider-direction-3" />
+            <img src="{% static 'hometri/images/slider/2.jpg' %}" alt="" title="#slider-direction-4" />
+        </div>
+        <!-- direction 1 -->
+        <div id="slider-direction-1" class="slider-direction">
+            <div class="slider-content text-center">
+                <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <h4 class="slider-1-title-1"> Know about <span>Property Management</span></h4>
+                </div>
+                <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+                    <h1 class="slider-1-title-2">MANAGE YOUR PROPERTY WITH US</h1>
+                </div>
+                <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
+                    <p class="slider-1-desc">Professional property management services for peace of mind.<br>Let us
+                        handle your property needs efficiently.</p>
+                </div>
+                <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2s">
+                    <a class="slider-button mt-40" href="{% url 'property_management_view' %}">Read More</a>
+                </div>
+            </div>
+        </div>
+        <!-- direction 2 -->
+        <div id="slider-direction-2" class="slider-direction">
+            <div class="slider-content text-left">
+                <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <h4 class="slider-1-title-1"> Rental <span>Real Estate Experience</span></h4>
+                </div>
+                <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+                    <h1 class="slider-1-title-2">FIND THE PERFECT RENTAL</h1>
+                </div>
+                <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
+                    <p class="slider-1-desc">Browse our listings to find your next rental home.<br>Affordable options
+                        for every lifestyle.</p>
+                </div>
+                <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2s">
+                    <a class="slider-button mt-40" href="{% url 'rent_view' %}">Read More</a>
+                </div>
+            </div>
+        </div>
+        <!-- direction 3 -->
+        <div id="slider-direction-3" class="slider-direction">
+            <div class="slider-content text-right">
+                <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <h4 class="slider-1-title-1"> About <span>Due Diligence</span></h4>
+                </div>
+                <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+                    <h1 class="slider-1-title-2">OWN YOUR DREAM HOME</h1>
+                </div>
+                <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
+                    <p class="slider-1-desc">Explore properties for sale and make your dream a reality.<br>Expert
+                        guidance every step of the way.</p>
+                </div>
+                <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2s">
+                    <a class="slider-button mt-40" href="{% url 'buy_view' %}">Read More</a>
+                </div>
+            </div>
+        </div>
+        <!-- direction 4 -->
+        <div id="slider-direction-4" class="slider-direction">
+            <div class="slider-content text-center">
+                <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <h4 class="slider-1-title-1">Property <span>Vendor's Disclosure</span></h4>
+                </div>
+                <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+                    <h1 class="slider-1-title-2">SELL YOUR PROPERTY FAST</h1>
+                </div>
+                <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
+                    <p class="slider-1-desc">Get the best value for your property with our expert team.<br>Quick and
+                        hassle-free selling process.</p>
+                </div>
+                <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2s">
+                    <a class="slider-button mt-40" href="{% url 'sale_view' %}">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FIND HOME AREA START -->
+<div class="find-home-area bg-blue call-to-bg plr-140 pt-60 pb-20">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-xs-12">
+                <div class="section-title text-white">
+                    <h3>FIND YOUR</h3>
+                    <h2 class="h1">HOME HERE</h2>
+                </div>
+            </div>
+            <div class="col-md-9 col-xs-12">
+                <div class="find-homes">
+                    <form action="{% url 'search' %}" method="GET">
+
+                        <div class="row">
+                            <div class="col-sm-3 col-xs-12">
+                                <div class="find-home-item">
+                                    <input type="text" name="keyword" placeholder="Enter Keyword">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3 col-xs-12">
+                                <div class="find-home-item custom-select">
+                                    <select class="selectpicker" title="Location" data-hide-disabled="true"
+                                        data-live-search="true" name="location">
+                                        {% for location_key,location_value in search_locations.items %}
+                                        <option>{{ location_value }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-5 col-xs-12">
+                                <div class="find-home-item mb-0-xs">
+                                    <button class="button-1 btn-block btn-hover-1">SEARCH</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<!-- FIND HOME AREA END -->
+
+<!-- ABOUT Hometri AREA START -->
+<div class="about-Hometri-area ptb-115">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-xs-12">
+                <div class="section-title mb-30">
+                    <h3>SOME WORD </h3>
+                    <h2>ABOUT Hometri</h2>
+                </div>
+                <div class="about-Hometri-info">
+                    <p><span data-placement="top" data-toggle="tooltip" data-original-title="The name you can trust"
+                            class="tooltip-content">Hometri</span> is the best theme for elit, sed do eiusmod tempor
+                        dolor sit amet, conse ctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        lorna aliquatd minim veniam, quis nostrud exercitation oris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolo.</p>
+                    <p>Lorem is a dummy text do eiusmod tempor dolor sit amet, onsectetur adip iscing elit, sed do
+                        eiusmod tempor incididunt ut labore et lorna aliqua Ut enim onsectetur </p>
+                    <p>Lorem is a dummy text do eiusmod tempor dolor sit amet, onsectetur adip iscing elit, sed do
+                        eiusmod tempor incididunt ut labore et lorna aliqua Ut enim onsectetur </p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <div class="about-image">
+                    <img src="{% static 'hometri/images/about/1.jpg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ABOUT Hometri AREA END -->
+
+<!-- SERVICES AREA START -->
+<div class="services-area pb-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title-2 text-center">
+                    <h2>OUR SERVICES</h2>
+                    <p>Hometri is the best theme for elit, sed do eiusmod tempor dolor sit amet, conse ctetur adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore et lorna aliquatd minim veniam, quis nostrud
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="service-carousel">
+                <!-- service-item -->
+                <div class="col-md-12">
+                    <div class="service-item">
+                        <div class="service-item-image">
+                            <a href="{% url 'sale_view' %}"><img src="{% static 'hometri/images/service/1.jpg' %}"
+                                    alt=""></a>
+                        </div>
+                        <div class="service-item-info">
+                            <h5><a href="{% url 'sale_view' %}">Sale Property</a></h5>
+                            <p>Property sale best theme for litdo eiusmod tempor dolor sit amet, conse tetur adiping
+                                eiusmo</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- service-item -->
+                <div class="col-md-12">
+                    <div class="service-item">
+                        <div class="service-item-image">
+                            <a href="{% url 'buy_view' %}"><img src="{% static 'hometri/images/service/2.jpg' %}"
+                                    alt=""></a>
+                        </div>
+                        <div class="service-item-info">
+                            <h5><a href="{% url 'buy_view' %}">Buy Property</a></h5>
+                            <p>Property sale best theme for litdo eiusmod tempor dolor sit amet, conse tetur adiping
+                                eiusmo</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- service-item -->
+                <div class="col-md-12">
+                    <div class="service-item">
+                        <div class="service-item-image">
+                            <a href="{% url 'rent_view' %}"><img src="{% static 'hometri/images/service/3.jpg' %}"
+                                    alt=""></a>
+                        </div>
+                        <div class="service-item-info">
+                            <h5><a href="{% url 'rent_view' %}">Rent Property</a></h5>
+                            <p>Property sale best theme for litdo eiusmod tempor dolor sit amet, conse tetur adiping
+                                eiusmo</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- service-item -->
+                <div class="col-md-12">
+                    <div class="service-item">
+                        <div class="service-item-image">
+                            <a href="{% url 'property_management_view' %}"><img
+                                    src="{% static 'hometri/images/service/4.jpg' %}" alt=""></a>
+                        </div>
+                        <div class="service-item-info">
+                            <h5><a href="{% url 'property_management_view' %}">Property Management</a></h5>
+                            <p>Property sale best theme for litdo eiusmod tempor dolor sit amet, conse tetur adiping
+                                eiusmo</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- service-item -->
+                <div class="col-md-12">
+                    <div class="service-item">
+                        <div class="service-item-image">
+                            <a href="#"><img src="{% static 'hometri/images/service/4.jpg' %}" alt=""></a>
+                        </div>
+                        <div class="service-item-info">
+                            <h5><a href="#">Sale Property</a></h5>
+                            <p>Property sale best theme for litdo eiusmod tempor dolor sit amet, conse tetur adiping
+                                eiusmo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- SERVICES AREA END -->
+
+<!-- BOOKING AREA START -->
+<div class="booking-area bg-1 call-to-bg plr-140 pt-75">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="section-title text-white">
+                    <h3>BOOK YOUR</h3>
+                    <h2 class="h1">HOME HERE</h2>
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-8 col-xs-12">
+                <div class="booking-conternt clearfix">
+                    <div class="book-house text-white">
+                        <h2>BOOK YO`UR APPARTMENT OR HOUSE </h2>
+                        <h2 class="h5">CALL US ON : +0306 228 1637 </h2>
+                    </div>
+                    <div class="booking-imgae">
+                        <img src="{% static 'hometri/images/others/booking.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- BOOKING AREA END -->
+
+<!-- FEATURED FLAT AREA START -->
+<div class="featured-flat-area pt-115 pb-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title-2 text-center">
+                    <h2>Featured PROPERTY</h2>
+                    <p>Hometri is the best theme for elit, sed do eiusmod tempor dolor sit amet, conse ctetur adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore et lorna aliquatd minim veniam, quis nostrud
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="featured-flat">
+            <div class="row">
+                {% for home in homes|dictsortreversed:"created" %}
+                {% if home.available %}
+                {% if forloop.counter0|divisibleby:3 and not forloop.first %}</div>
+            <div class="row">{% endif %}
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="flat-item">
+                        <div class="flat-item-image">
+                            <span class="for-sale">{{ home.status }}</span>
+                            <a href="{% url 'property_detail' home.slug %}"><img src="{{ home.image.url }}"
+                                    width="368px" height="250px" alt=""></a>
+                            <div class="flat-link">
+                                <a href="{% url 'property_detail' home.slug %}">More Details</a>
+                            </div>
+                            <ul class="flat-desc">
+                                <li>
+                                    <img src="{% static 'hometri/images/icons/4.png' %}" alt="">
+                                    <span>{{ home.area }}</span>
+                                </li>
+                                <li>
+                                    <img src="{% static 'hometri/images/icons/5.png' %}" alt="">
+                                    <span>{{ home.bedrooms }}</span>
+                                </li>
+                                <li>
+                                    <img src="{% static 'hometri/images/icons/6.png' %}" alt="">
+                                    <span>{{ home.bathrooms }}</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flat-item-info">
+                            <div class="flat-title-price">
+                                <h5><a href="{% url 'property_detail' home.slug %}">{{ home.title }}</a></h5>
+                                <span class="price">${{ home.price }}</span>
+                            </div>
+                            <p><img src="{% static 'hometri/images/icons/location.png' %}" alt="">{{ home.location }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% empty %}
+                <div class="col-md-12">
+                    <p>No properties available.</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FEATURED FLAT AREA END -->
+
+<!-- FEATURES AREA START -->
+<div class="features-area fix">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-7 col-md-offset-5">
+                <div class="features-info bg-gray">
+                    <div class="section-title mb-30">
+                        <h3>HERE IS</h3>
+                        <h2 class="h1">AWESOME FEATUES</h2>
+                    </div>
+                    <div class="features-desc">
+                        <p><span data-placement="top" data-toggle="tooltip" data-original-title="The name you can trust"
+                                class="tooltip-content">Hometri</span> is the best theme for elit, sed do eiusmod tempor
+                            dolor sit amet, conse ctetur adipiscing elit, sed do smod tempor incididunt ut labore et
+                            lorna aliquatd minim veniam, quis nostrud exercitation oris nisi</p>
+                    </div>
+                    <div class="features-include">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-4">
+                                <div class="features-include-list">
+                                    <h6><img src="{% static 'hometri/images/icons/7.png' %}" alt="">Fully Furnished</h6>
+                                    <p>Lorem is a dummy text do eiud tempor dolor sit amet dum</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-4">
+                                <div class="features-include-list">
+                                    <h6><img src="{% static 'hometri/images/icons/7.png' %}" alt="">Royal Touch Paint
+                                    </h6>
+                                    <p>Lorem is a dummy text do eiud tempor dolor sit amet dum</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-4">
+                                <div class="features-include-list">
+                                    <h6><img src="{% static 'hometri/images/icons/7.png' %}" alt="">Latest Interior
+                                        Design</h6>
+                                    <p>Lorem is a dummy text do eiud tempor dolor sit amet dum</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-4">
+                                <div class="features-include-list">
+                                    <h6><img src="{% static 'hometri/images/icons/7.png' %}" alt="">Non Stop Security
+                                    </h6>
+                                    <p>Lorem is a dummy text do eiud tempor dolor sit amet dum</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-4">
+                                <div class="features-include-list">
+                                    <h6><img src="{% static 'hometri/images/icons/7.png' %}" alt="">Living Inside a
+                                        Nature</h6>
+                                    <p>Lorem is a dummy text do eiud tempor dolor sit amet dum</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-4">
+                                <div class="features-include-list">
+                                    <h6><img src="{% static 'hometri/images/icons/7.png' %}" alt="">Luxurious Fittings
+                                    </h6>
+                                    <p>Lorem is a dummy text do eiud tempor dolor sit amet dum</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FEATURES AREA END -->
+{% endblock %}

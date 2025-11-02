@@ -1,0 +1,1974 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏠 hometri.com - Documentation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #092E20;
+            --secondary-color: #44B78B;
+            --accent-color: #0C4B33;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .badge-custom {
+            margin: 5px;
+            padding: 8px 15px;
+            font-size: 0.9rem;
+        }
+
+        .nav-pills .nav-link {
+            color: var(--primary-color);
+            border-radius: 50px;
+            margin: 5px;
+            font-weight: 500;
+        }
+
+        .nav-pills .nav-link.active {
+            background-color: var(--primary-color);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary-color);
+        }
+
+        .feature-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .code-block {
+            background: #f8f9fa;
+            border-left: 4px solid var(--secondary-color);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .code-block code {
+            color: #d63384;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+        }
+
+        .step-number {
+            background: var(--secondary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .alert-custom {
+            border-left: 4px solid;
+            border-radius: 8px;
+        }
+
+        .alert-tip {
+            border-left-color: #0dcaf0;
+            background-color: #cff4fc;
+        }
+
+        .alert-warning-custom {
+            border-left-color: #ffc107;
+            background-color: #fff3cd;
+        }
+
+        .footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+            margin-top: 80px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: var(--primary-color);">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#Hero"><i class="bi bi-house-door-fill"></i> hometri.com</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <form class="d-flex ms-auto my-2 my-lg-0" role="search" id="navbarSearchForm" autocomplete="off">
+                    <input class="form-control me-2" type="search" placeholder="Search docs..." aria-label="Search"
+                        id="navbarSearchInput" style="min-width: 120px;">
+                    <button class="btn btn-outline-light" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="Hero" class="hero-section">
+        <div class="container">
+            <h1><i class="bi bi-house-heart-fill"></i> hometri.com</h1>
+            <p class="lead fs-4 mb-4">A comprehensive real estate platform built with Django</p>
+            <div class="mb-4">
+                <span class="badge bg-light text-dark badge-custom">
+                    <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white"
+                        alt="Django">
+                </span>
+                <span class="badge bg-light text-dark badge-custom">
+                    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"
+                        alt="Python">
+                </span>
+                <span class="badge bg-light text-dark badge-custom">
+                    <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white"
+                        alt="SQLite">
+                </span>
+                <span class="badge bg-light text-dark badge-custom">
+                    <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white"
+                        alt="PostgreSQL">
+                </span>
+                <span class="badge bg-light text-dark badge-custom">
+                    <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white"
+                        alt="Bootstrap">
+                </span>
+            </div>
+            <p class="fs-5 mb-4">Designed to manage agents, listings, teams, and users with a robust backend, admin
+                interface, and customizable frontend for real estate operations.</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="#features" class="btn btn-light btn-lg px-4"><i class="bi bi-star-fill"></i> Features</a>
+                <a href="#installation" class="btn btn-outline-light btn-lg px-4"><i class="bi bi-download"></i>
+                    Installation</a>
+                <a href="#contributing" class="btn btn-outline-light btn-lg px-4"><i class="bi bi-git"></i>
+                    Contributing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Table of Contents -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4"><i class="bi bi-list-ul"></i> Table of Contents</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <ul class="nav nav-pills justify-content-center flex-wrap">
+                        <li class="nav-item"><a class="nav-link" href="#overview">🎯 Project Overview</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#features">✨ Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#installation">🚀 Installation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#configuration">⚙️ Configuration</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#migrations">🗄️ Migrations</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#running">▶️ Running</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#static-media">📦 Static & Media</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#admin">👨‍💼 Admin Panel</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#testing">🧪 Testing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#images">🖼️ Images</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contributing">🤝 Contributing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#license">📄 License</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact-author">✉️ Contact & Author</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section id="overview" class="py-5">
+        <div class="container">
+            <h2 class="section-title">🎯 Project Overview</h2>
+            <div class="row">
+                <div class="col-lg-8">
+                    <p class="fs-5"><strong>hometri.com</strong> is a Django-based web application for real estate
+                        management. It supports agent profiles, property listings, team management, and user
+                        authentication. The project is modular, scalable, and ready for production deployment.</p>
+
+                    <div class="alert alert-info" role="alert">
+                        <strong><i class="bi bi-info-circle-fill"></i> Built for:</strong> Real estate agencies,
+                        property management companies, and housing platforms<br>
+                        <strong><i class="bi bi-stack"></i> Tech Stack:</strong> Django, Python, SQLite/PostgreSQL,
+                        Bootstrap
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card feature-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-building feature-icon"></i>
+                            <h5 class="card-title">Real Estate Platform</h5>
+                            <p class="card-text">Complete solution for property management and real estate operations
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">✨ Features</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card feature-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-gear-fill feature-icon"></i>
+                            <h5 class="card-title">Admin Interface</h5>
+                            <p class="card-text">Custom templates with enhanced UI for easy management</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card feature-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-folder-fill feature-icon"></i>
+                            <h5 class="card-title">File Handling</h5>
+                            <p class="card-text">Comprehensive static and media file management</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card feature-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-puzzle-fill feature-icon"></i>
+                            <h5 class="card-title">Modular Design</h5>
+                            <p class="card-text">Separated apps: agents, team, users, hometri</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card feature-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-chat-dots-fill feature-icon"></i>
+                            <h5 class="card-title">Responsive UI</h5>
+                            <p class="card-text">Optimized for all devices with adaptive layouts and fast interactions
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card feature-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-palette-fill feature-icon"></i>
+                            <h5 class="card-title">Bootstrap UI</h5>
+                            <p class="card-text">Responsive and modern interface design</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card feature-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-database-fill feature-icon"></i>
+                            <h5 class="card-title">Database Flexibility</h5>
+                            <p class="card-text">Support for SQLite and PostgreSQL</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation -->
+    <section id="installation" class="py-5">
+        <div class="container">
+            <h2 class="section-title">🚀 Installation</h2>
+
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="bi bi-check-circle-fill"></i> Prerequisites</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-check2 text-success"></i> Python 3.8 or higher</li>
+                        <li class="mb-2"><i class="bi bi-check2 text-success"></i> pip (Python package manager)</li>
+                        <li class="mb-2"><i class="bi bi-check2 text-success"></i> Virtual environment (recommended)
+                        </li>
+                        <li class="mb-2"><i class="bi bi-check2 text-success"></i> PostgreSQL (optional, for production)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h4 class="mb-4">Step-by-Step Setup</h4>
+
+            <div class="mb-4">
+                <h5><span class="step-number">1</span>Clone the repository</h5>
+                <div class="code-block">
+                    <code>git clone https://github.com/spyberpolymath/hometri.com.git
+cd hometri.com</code>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <h5><span class="step-number">2</span>Create a virtual environment</h5>
+                <div class="code-block">
+                    <code># Windows
+python -m venv venv
+venv\Scripts\activate
+
+# Linux/Mac
+python -m venv venv
+source venv/bin/activate</code>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <h5><span class="step-number">3</span>Install dependencies</h5>
+                <div class="code-block">
+                    <code>pip install -r requirements.txt</code>
+                </div>
+                <div class="alert alert-tip alert-custom mt-3" role="alert">
+                    <strong>💡 Tip:</strong> Ensure your virtual environment is activated before installing
+                    dependencies!
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Configuration -->
+    <section id="configuration" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">⚙️ Configuration</h2>
+
+            <h4 class="mb-4">Settings Configuration</h4>
+            <p>Main settings are located in <code>server/settings.py</code>. Key configurations to update:</p>
+
+            <div class="row mb-4">
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-dark text-white">
+                            <h5 class="mb-0">SQLite Configuration (Default - Development)</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="code-block">
+                                <code># Database Configuration
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-success text-white">
+                            <h5 class="mb-0">PostgreSQL Configuration (Production)</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="code-block">
+                                <code># Database Configuration
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'hometri_db',
+        'USER': 'your_db_user',
+        'PASSWORD': 'your_db_password',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="mb-3">Other Key Settings</h4>
+            <div class="code-block mb-4">
+                <code># Allowed Hosts
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+
+# Static Files
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_URL = '/static/'
+
+# Media Files
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'</code>
+            </div>
+
+            <h4 class="mb-3">Environment Variables</h4>
+            <p>For production, use environment variables for sensitive data:</p>
+            <div class="code-block mb-3">
+                <code># Create a .env file
+SECRET_KEY=your-secret-key-here
+DEBUG=False
+DATABASE_URL=postgresql://user:password@localhost:5432/hometri_db
+ALLOWED_HOSTS=yourdomain.com,www.yourdomain.com</code>
+            </div>
+            <div class="alert alert-warning-custom alert-custom" role="alert">
+                <strong>⚠️ Security:</strong> Never commit your .env file or expose your SECRET_KEY!
+            </div>
+
+            <h4 class="mb-3">PostgreSQL Setup</h4>
+            <div class="mb-3">
+                <h5>Install PostgreSQL:</h5>
+                <div class="code-block">
+                    <code># Ubuntu/Debian
+sudo apt-get install postgresql postgresql-contrib
+
+# macOS (using Homebrew)
+brew install postgresql
+
+# Windows
+# Download installer from postgresql.org</code>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <h5>Create Database:</h5>
+                <div class="code-block">
+                    <code># Access PostgreSQL
+sudo -u postgres psql
+
+# Create database and user
+CREATE DATABASE hometri_db;
+CREATE USER your_db_user WITH PASSWORD 'your_db_password';
+GRANT ALL PRIVILEGES ON DATABASE hometri_db TO your_db_user;
+\q</code>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <h5>Install psycopg2:</h5>
+                <div class="code-block">
+                    <code>pip install psycopg2-binary</code>
+                </div>
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-header bg-dark text-white">
+                    <h5 class="mb-0">Admin Features</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> Custom admin templates
+                        </li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> App-specific admin
+                            customizations</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> User and permission
+                            management</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> Model CRUD operations</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> Bulk actions and filters
+                        </li>
+                    </ul>
+                    <hr>
+                    <p><strong>Customization:</strong> Admin templates can be customized in:</p>
+                    <ul>
+                        <li><code>hometri/templates/admin/</code> - Global admin templates</li>
+                        <li><code>&lt;app&gt;/templates/admin/&lt;app&gt;/</code> - App-specific templates</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Database Migrations -->
+    <section id="migrations" class="py-5">
+        <div class="container">
+            <h2 class="section-title">🗄️ Database Migrations</h2>
+            <p class="lead">Set up your database with these commands:</p>
+
+            <div class="row">
+                <div class="col-lg-6 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-file-earmark-code"></i> Create Migration Files</h5>
+                            <div class="code-block">
+                                <code>python manage.py makemigrations</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-database-check"></i> Apply Migrations</h5>
+                            <div class="code-block">
+                                <code>python manage.py migrate</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0">Migration Tips</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="mb-0">
+                        <li>Run migrations after every model change</li>
+                        <li>Check migration status: <code>python manage.py showmigrations</code></li>
+                        <li>Rollback if needed:
+                            <code>python manage.py migrate &lt;app_name&gt; &lt;migration_name&gt;</code>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Running the Project -->
+    <section id="running" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">▶️ Running the Project</h2>
+
+            <div class="card mb-4">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0">Start Development Server</h5>
+                </div>
+                <div class="card-body">
+                    <div class="code-block">
+                        <code>python manage.py runserver</code>
+                    </div>
+                    <hr>
+                    <h6>🌐 Access your application:</h6>
+                    <ul>
+                        <li>Main site: <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a></li>
+                        <li>Admin panel: <a href="http://127.0.0.1:8000/admin/"
+                                target="_blank">http://127.0.0.1:8000/admin/</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Custom Port</h5>
+                            <div class="code-block">
+                                <code>python manage.py runserver 8080</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Network Access</h5>
+                            <div class="code-block">
+                                <code>python manage.py runserver 0.0.0.0:8000</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Static & Media Files -->
+    <section id="static-media" class="py-5">
+        <div class="container">
+            <h2 class="section-title">📦 Static & Media Files</h2>
+
+            <h4 class="mb-3">Static Files Management</h4>
+            <div class="row mb-4">
+                <div class="col-lg-6 mb-3">
+                    <div class="card h-100">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0">Development</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="mb-0">
+                                <li>Place static assets in <code>hometri/static/</code> or app-specific static folders
+                                </li>
+                                <li>Django automatically serves them in DEBUG mode</li>
+                                <li>Bootstrap is integrated via CDN or local files</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-3">
+                    <div class="card h-100">
+                        <div class="card-header bg-success text-white">
+                            <h5 class="mb-0">Production</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="code-block">
+                                <code># Collect all static files
+python manage.py collectstatic
+
+# Answer 'yes' to confirm</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h5>Configuration in settings.py:</h5>
+            <div class="code-block mb-4">
+                <code>STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_DIRS = [BASE_DIR / 'static']</code>
+            </div>
+
+            <h4 class="mb-3">Bootstrap Integration</h4>
+            <p>Bootstrap is included in the project for responsive UI design:</p>
+            <div class="code-block mb-4">
+                <code>&lt;!-- In your base template --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;</code>
+            </div>
+
+            <h4 class="mb-3">Media Files Management</h4>
+            <p>Uploaded files are stored in <code>media/</code> directory.</p>
+            <div class="code-block mb-3">
+                <code>MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'</code>
+            </div>
+            <div class="alert alert-info" role="alert">
+                <strong><i class="bi bi-info-circle"></i> Note:</strong> Ensure MEDIA_ROOT and MEDIA_URL are properly
+                configured in your settings!
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Panel -->
+    <section id="admin" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">👨‍💼 Admin Panel</h2>
+
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Accessing the Admin Panel</h5>
+                </div>
+                <div class="card-body">
+                    <p class="mb-0"><strong>URL:</strong> <code>/admin/</code></p>
+                </div>
+            </div>
+
+            <h4 class="mb-3">Create Superuser</h4>
+            <div class="code-block mb-3">
+                <code>python manage.py createsuperuser</code>
+            </div>
+            <p>Follow the prompts to set:</p>
+            <ul>
+                <li>Username</li>
+                <li>Email address</li>
+                <li>Password</li>
+            </ul>
+
+            <h4 class="mb-3 mt-4">Admin Features</h4>
+            <div class="row g-3">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-success">
+                        <div class="card-body">
+                            <i class="bi bi-check-circle-fill text-success fs-3"></i>
+                            <h6 class="mt-2">Custom Admin Templates</h6>
+                            <p class="small mb-0">in <code>hometri/templates/admin/</code></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-success">
+                        <div class="card-body">
+                            <i class="bi bi-check-circle-fill text-success fs-3"></i>
+                            <h6 class="mt-2">App-Specific Customizations</h6>
+                            <p class="small mb-0">Tailored admin interfaces</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-success">
+                        <div class="card-body">
+                            <i class="bi bi-check-circle-fill text-success fs-3"></i>
+                            <h6 class="mt-2">User Management</h6>
+                            <p class="small mb-0">Permissions & roles</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-success">
+                        <div class="card-body">
+                            <i class="bi bi-check-circle-fill text-success fs-3"></i>
+                            <h6 class="mt-2">Model CRUD Operations</h6>
+                            <p class="small mb-0">Create, Read, Update, Delete</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-success">
+                        <div class="card-body">
+                            <i class="bi bi-check-circle-fill text-success fs-3"></i>
+                            <h6 class="mt-2">Bulk Actions</h6>
+                            <p class="small mb-0">Efficient data management</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-success">
+                        <div class="card-body">
+                            <i class="bi bi-check-circle-fill text-success fs-3"></i>
+                            <h6 class="mt-2">Advanced Filters</h6>
+                            <p class="small mb-0">Quick data access</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-header bg-secondary text-white">
+                    <h5 class="mb-0">Customization Paths</h5>
+                </div>
+                <div class="card-body">
+                    <p>Admin templates can be customized in:</p>
+                    <ul class="mb-0">
+                        <li><code>hometri/templates/admin/</code> - Global admin templates</li>
+                        <li><code>&lt;app&gt;/templates/admin/&lt;app&gt;/</code> - App-specific templates</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testing -->
+    <section id="testing" class="py-5">
+        <div class="container">
+            <h2 class="section-title">🧪 Testing</h2>
+
+            <div class="row mb-4">
+                <div class="col-lg-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-play-circle"></i> Run All Tests</h5>
+                            <div class="code-block">
+                                <code>python manage.py test</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-journal-code"></i> Specific App Tests</h5>
+                            <div class="code-block">
+                                <code>python manage.py test agents
+python manage.py test team
+python manage.py test users</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-graph-up"></i> Test with Coverage</h5>
+                            <div class="code-block">
+                                <code>pip install coverage
+coverage run --source='.' manage.py test
+coverage report
+coverage html</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0">Writing Tests</h5>
+                </div>
+                <div class="card-body">
+                    <p>Tests are located in each app's <code>tests.py</code>:</p>
+                    <div class="code-block">
+                        <code>from django.test import TestCase
+
+class AgentTestCase(TestCase):
+    def test_agent_creation(self):
+        # Your test code here
+        pass</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Images Section -->
+    <section id="images" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">🖼️ Adding Images</h2>
+
+            <div class="alert alert-info" role="alert">
+                <h5 class="alert-heading"><i class="bi bi-info-circle"></i> Image Gallery / Screenshots</h5>
+                <p class="mb-0">Showcase my application by adding project screenshots below. The gallery features all
+                    images currently available in the <strong>./</strong> folder. Remember to update this section if
+                    you add or remove demo images in the future.</p>
+            </div>
+
+            <div class="accordion" id="imageAccordion">
+                <!-- Demo -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#demoImages">
+                            <i class="bi bi-images me-2"></i> Demo Overview
+                        </button>
+                    </h2>
+                    <div id="demoImages" class="accordion-collapse collapse show" data-bs-parent="#imageAccordion">
+                        <div class="accordion-body">
+                            <img src="./demo.png" alt="Project Demo Overview" class="img-fluid rounded shadow mb-3">
+                            <p><code>demo/demo.png</code> - Project demo overview</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Home -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#homeImages">
+                            <i class="bi bi-house me-2"></i> Home Screenshots (7 images)
+                        </button>
+                    </h2>
+                    <div id="homeImages" class="accordion-collapse collapse" data-bs-parent="#imageAccordion">
+                        <div class="accordion-body">
+                            <div class="row g-2">
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./home/1.png" alt="Home Screenshot 1"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./home/2.png" alt="Home Screenshot 2"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./home/3.png" alt="Home Screenshot 3"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./home/4.png" alt="Home Screenshot 4"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./home/5.png" alt="Home Screenshot 5"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./home/6.png" alt="Home Screenshot 6"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./home/7.png" alt="Home Screenshot 7"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                            </div>
+                            <p class="mt-2">Images: <code>./home/1.png</code> through <code>./home/7.png</code>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#aboutImages">
+                            <i class="bi bi-info-circle me-2"></i> About Page (7 images)
+                        </button>
+                    </h2>
+                    <div id="aboutImages" class="accordion-collapse collapse" data-bs-parent="#imageAccordion">
+                        <div class="accordion-body">
+                            <div class="row g-2">
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./about/1.png" alt="About Screenshot 1"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./about/2.png" alt="About Screenshot 2"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./about/3.png" alt="About Screenshot 3"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./about/4.png" alt="About Screenshot 4"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./about/5.png" alt="About Screenshot 5"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./about/6.png" alt="About Screenshot 6"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./about/7.png" alt="About Screenshot 7"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                            </div>
+                            <p class="mt-2">Images: <code>./about/1.png</code> through
+                                <code>./about/7.png</code>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Admin -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#adminImages">
+                            <i class="bi bi-shield-lock me-2"></i> Admin Panel (14 images)
+                        </button>
+                    </h2>
+                    <div id="adminImages" class="accordion-collapse collapse" data-bs-parent="#imageAccordion">
+                        <div class="accordion-body">
+                            <div class="row g-2">
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./admin/1.png" alt="Admin Screenshot 1"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./admin/2.png" alt="Admin Screenshot 2"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./admin/3.png" alt="Admin Screenshot 3"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./admin/4.png" alt="Admin Screenshot 4"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./admin/5.png" alt="Admin Screenshot 5"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./admin/6.png" alt="Admin Screenshot 6"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./admin/7.png" alt="Admin Screenshot 7"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./admin/8.png" alt="Admin Screenshot 8"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./admin/9.png" alt="Admin Screenshot 9"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./admin/11.png" alt="Admin Screenshot 11"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./admin/12.png" alt="Admin Screenshot 12"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./admin/13.png" alt="Admin Screenshot 13"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./admin/14.png" alt="Admin Screenshot 14"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                            </div>
+                            <p class="mt-2">Images: <code>./admin/1.png</code> through
+                                <code>./admin/14.png</code>
+                            </p>
+                            <p class="small text-muted mb-0">Note: Image 10 is not included in the sequence</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hometri Admin -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#hometriAdminImages">
+                            <i class="bi bi-gear me-2"></i> Hometri Admin (8 images)
+                        </button>
+                    </h2>
+                    <div id="hometriAdminImages" class="accordion-collapse collapse" data-bs-parent="#imageAccordion">
+                        <div class="accordion-body">
+                            <div class="row g-2">
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./Hometri-admin/1.png" alt="Hometri Admin Screenshot 1"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./Hometri-admin/2.png" alt="Hometri Admin Screenshot 2"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./Hometri-admin/3.png" alt="Hometri Admin Screenshot 3"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./Hometri-admin/4.png" alt="Hometri Admin Screenshot 4"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./Hometri-admin/5.png" alt="Hometri Admin Screenshot 5"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./Hometri-admin/6.png" alt="Hometri Admin Screenshot 6"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./Hometri-admin/7.png" alt="Hometri Admin Screenshot 7"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./Hometri-admin/8.png" alt="Hometri Admin Screenshot 8"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                            </div>
+                            <p class="mt-2">Images: <code>./Hometri-admin/1.png</code> through
+                                <code>./Hometri-admin/8.png</code>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Agents Admin -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#agentsAdminImages">
+                            <i class="bi bi-people me-2"></i> Agents Admin Side (18 images)
+                        </button>
+                    </h2>
+                    <div id="agentsAdminImages" class="accordion-collapse collapse" data-bs-parent="#imageAccordion">
+                        <div class="accordion-body">
+                            <div class="row g-2">
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./agents/admin-side/1.png" alt="Agents Admin Screenshot 1"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./agents/admin-side/2.png" alt="Agents Admin Screenshot 2"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./agents/admin-side/3.png" alt="Agents Admin Screenshot 3"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./agents/admin-side/4.png" alt="Agents Admin Screenshot 4"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./agents/admin-side/5.png" alt="Agents Admin Screenshot 5"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./agents/admin-side/6.png" alt="Agents Admin Screenshot 6"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./agents/admin-side/7.png" alt="Agents Admin Screenshot 7"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./agents/admin-side/8.png" alt="Agents Admin Screenshot 8"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./agents/admin-side/9.png" alt="Agents Admin Screenshot 9"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./agents/admin-side/10.png" alt="Agents Admin Screenshot 10"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./agents/admin-side/11.png" alt="Agents Admin Screenshot 11"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./agents/admin-side/12.png" alt="Agents Admin Screenshot 12"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./agents/admin-side/13.png" alt="Agents Admin Screenshot 13"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./agents/admin-side/14.png" alt="Agents Admin Screenshot 14"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./agents/admin-side/15.png" alt="Agents Admin Screenshot 15"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./agents/admin-side/16.png" alt="Agents Admin Screenshot 16"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./agents/admin-side/17.png" alt="Agents Admin Screenshot 17"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./agents/admin-side/18.png" alt="Agents Admin Screenshot 18"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                            </div>
+                            <p class="mt-2">Images: <code>./agents/admin-side/1.png</code> through
+                                <code>./agents/admin-side/18.png</code>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Agents Client -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#agentsClientImages">
+                            <i class="bi bi-person me-2"></i> Agents Client Side (11 images)
+                        </button>
+                    </h2>
+                    <div id="agentsClientImages" class="accordion-collapse collapse" data-bs-parent="#imageAccordion">
+                        <div class="accordion-body">
+                            <div class="row g-2">
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./agents/clinet-side/1.png" alt="Agents Client Screenshot 1"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./agents/clinet-side/2.png" alt="Agents Client Screenshot 2"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./agents/clinet-side/3.png" alt="Agents Client Screenshot 3"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./agents/clinet-side/4.png" alt="Agents Client Screenshot 4"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./agents/clinet-side/5.png" alt="Agents Client Screenshot 5"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./agents/clinet-side/6.png" alt="Agents Client Screenshot 6"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./agents/clinet-side/7.png" alt="Agents Client Screenshot 7"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./agents/clinet-side/8.png" alt="Agents Client Screenshot 8"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./agents/clinet-side/9.png" alt="Agents Client Screenshot 9"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./agents/clinet-side/10.png" alt="Agents Client Screenshot 10"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./agents/clinet-side/11.png" alt="Agents Client Screenshot 11"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                            </div>
+                            <p class="mt-2">Images: <code>./agents/clinet-side/1.png</code> through
+                                <code>./agents/clinet-side/11.png</code>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Admin & Client -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#contactImages">
+                            <i class="bi bi-envelope me-2"></i> Contact Pages (7 images)
+                        </button>
+                    </h2>
+                    <div id="contactImages" class="accordion-collapse collapse" data-bs-parent="#imageAccordion">
+                        <div class="accordion-body">
+                            <div class="row g-2 mb-2">
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./contact/admin-side/1.png" alt="Contact Admin Screenshot 1"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./contact/admin-side/2.png" alt="Contact Admin Screenshot 2"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./contact/admin-side/3.png" alt="Contact Admin Screenshot 3"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./contact/admin-side/4.png" alt="Contact Admin Screenshot 4"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./contact/clinet-side/1.png" alt="Contact Client Screenshot 1"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./contact/clinet-side/2.png" alt="Contact Client Screenshot 2"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./contact/clinet-side/3.png" alt="Contact Client Screenshot 3"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                            </div>
+                            <p class="mt-2"><strong>Admin Side:</strong> <code>./contact/admin-side/1.png</code>
+                                through <code>./contact/admin-side/4.png</code></p>
+                            <p><strong>Client Side:</strong> <code>./contact/clinet-side/1.png</code> through
+                                <code>./contact/clinet-side/3.png</code>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property Admin & Client -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#propertyImages">
+                            <i class="bi bi-building me-2"></i> Property Pages (13 images)
+                        </button>
+                    </h2>
+                    <div id="propertyImages" class="accordion-collapse collapse" data-bs-parent="#imageAccordion">
+                        <div class="accordion-body">
+                            <div class="row g-2 mb-2">
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./property/admin-side/1.png" alt="Property Admin Screenshot 1"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./property/admin-side/2.png" alt="Property Admin Screenshot 2"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./property/admin-side/3.png" alt="Property Admin Screenshot 3"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./property/admin-side/4.png" alt="Property Admin Screenshot 4"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./property/admin-side/5.png" alt="Property Admin Screenshot 5"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./property/admin-side/6.png" alt="Property Admin Screenshot 6"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./property/client-side/1.png" alt="Property Client Screenshot 1"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./property/client-side/2.png" alt="Property Client Screenshot 2"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./property/client-side/3.png" alt="Property Client Screenshot 3"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./property/client-side/4.png" alt="Property Client Screenshot 4"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./property/client-side/5.png" alt="Property Client Screenshot 5"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./property/client-side/6.png" alt="Property Client Screenshot 6"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./property/client-side/7.png" alt="Property Client Screenshot 7"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                            </div>
+                            <p class="mt-2"><strong>Admin Side:</strong> <code>./property/admin-side/1.png</code>
+                                through <code>./property/admin-side/6.png</code></p>
+                            <p><strong>Client Side:</strong> <code>./property/client-side/1.png</code> through
+                                <code>./property/client-side/7.png</code>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Search -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#searchImages">
+                            <i class="bi bi-search me-2"></i> Search Features (3 images)
+                        </button>
+                    </h2>
+                    <div id="searchImages" class="accordion-collapse collapse" data-bs-parent="#imageAccordion">
+                        <div class="accordion-body">
+                            <div class="row g-2">
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./search/1.png" alt="Search Screenshot 1"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./search/2.png" alt="Search Screenshot 2"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./search/3.png" alt="Search Screenshot 3"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                            </div>
+                            <p class="mt-2">Images: <code>./search/1.png</code> through
+                                <code>./search/3.png</code>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#servicesImages">
+                            <i class="bi bi-grid me-2"></i> Services Pages (5 images)
+                        </button>
+                    </h2>
+                    <div id="servicesImages" class="accordion-collapse collapse" data-bs-parent="#imageAccordion">
+                        <div class="accordion-body">
+                            <div class="row g-2">
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./services/1.png" alt="Services Screenshot 1"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./services/2.png" alt="Services Screenshot 2"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./services/3.png" alt="Services Screenshot 3"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./services/4.png" alt="Services Screenshot 4"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./services/5.png" alt="Services Screenshot 5"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                            </div>
+                            <p class="mt-2">Images: <code>./services/1.png</code> through
+                                <code>./services/5.png</code>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Admin & Client -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#teamImages">
+                            <i class="bi bi-people-fill me-2"></i> Team Pages (26 images)
+                        </button>
+                    </h2>
+                    <div id="teamImages" class="accordion-collapse collapse" data-bs-parent="#imageAccordion">
+                        <div class="accordion-body">
+                            <div class="row g-2 mb-2">
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./team/admin-side/1.png" alt="Team Admin Screenshot 1"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./team/admin-side/2.png" alt="Team Admin Screenshot 2"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./team/admin-side/3.png" alt="Team Admin Screenshot 3"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./team/admin-side/4.png" alt="Team Admin Screenshot 4"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./team/admin-side/5.png" alt="Team Admin Screenshot 5"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./team/admin-side/6.png" alt="Team Admin Screenshot 6"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./team/admin-side/7.png" alt="Team Admin Screenshot 7"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./team/admin-side/8.png" alt="Team Admin Screenshot 8"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./team/admin-side/9.png" alt="Team Admin Screenshot 9"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./team/admin-side/10.png" alt="Team Admin Screenshot 10"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./team/admin-side/11.png" alt="Team Admin Screenshot 11"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./team/admin-side/12.png" alt="Team Admin Screenshot 12"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./team/admin-side/13.png" alt="Team Admin Screenshot 13"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./team/admin-side/14.png" alt="Team Admin Screenshot 14"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./team/admin-side/15.png" alt="Team Admin Screenshot 15"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./team/admin-side/16.png" alt="Team Admin Screenshot 16"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./team/clinet-side/1.png" alt="Team Client Screenshot 1"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./team/clinet-side/2.png" alt="Team Client Screenshot 2"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./team/clinet-side/3.png" alt="Team Client Screenshot 3"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./team/clinet-side/4.png" alt="Team Client Screenshot 4"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./team/clinet-side/5.png" alt="Team Client Screenshot 5"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./team/clinet-side/6.png" alt="Team Client Screenshot 6"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./team/clinet-side/7.png" alt="Team Client Screenshot 7"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./team/clinet-side/8.png" alt="Team Client Screenshot 8"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./team/clinet-side/9.png" alt="Team Client Screenshot 9"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 mb-2">
+                                    <img src="./team/clinet-side/10.png" alt="Team Client Screenshot 10"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                            </div>
+                            <p class="mt-2"><strong>Admin Side:</strong> <code>./team/admin-side/1.png</code>
+                                through <code>./team/admin-side/16.png</code></p>
+                            <p><strong>Client Side:</strong> <code>./team/clinet-side/1.png</code> through
+                                <code>./team/clinet-side/10.png</code>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Architecture Diagram -->
+            <div class="mt-5">
+                <h3 class="mb-4"><i class="bi bi-diagram-3"></i> Architecture Diagram</h3>
+                <div class="card">
+                    <div class="card-body text-center">
+                        <img src="./diagram.png" alt="Architecture Diagram" class="img-fluid rounded shadow">
+                        <p class="mt-3 text-muted">Architecture diagram: <code>demo/diagram.png</code></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contributing -->
+    <section id="contributing" class="py-5">
+        <div class="container">
+            <h2 class="section-title">🤝 Contributing</h2>
+            <p class="lead">We welcome contributions! Here's how you can help:</p>
+
+            <h4 class="mb-4">Contribution Workflow</h4>
+
+            <div class="timeline">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5><span class="step-number">1</span>Fork the repository</h5>
+                        <p class="mb-0">Click 'Fork' button on GitHub</p>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5><span class="step-number">2</span>Create a new branch</h5>
+                        <div class="code-block">
+                            <code>git checkout -b feature/your-feature-name</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5><span class="step-number">3</span>Make your changes</h5>
+                        <ul class="mb-0">
+                            <li>Write clean, documented code</li>
+                            <li>Follow PEP 8 style guidelines</li>
+                            <li>Add tests for new features</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5><span class="step-number">4</span>Commit your changes</h5>
+                        <div class="code-block">
+                            <code>git commit -am 'Add new feature: brief description'</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5><span class="step-number">5</span>Push to your branch</h5>
+                        <div class="code-block">
+                            <code>git push origin feature/your-feature-name</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5><span class="step-number">6</span>Open a Pull Request</h5>
+                        <ul class="mb-0">
+                            <li>Go to the original repository</li>
+                            <li>Click 'New Pull Request'</li>
+                            <li>Describe your changes in detail</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-5">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Contribution Guidelines</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="bi bi-check-circle text-success"></i> Write meaningful commit
+                            messages</li>
+                        <li class="mb-2"><i class="bi bi-check-circle text-success"></i> Update documentation for new
+                            features</li>
+                        <li class="mb-2"><i class="bi bi-check-circle text-success"></i> Ensure all tests pass</li>
+                        <li class="mb-2"><i class="bi bi-check-circle text-success"></i> Follow the existing code style
+                        </li>
+                        <li class="mb-2"><i class="bi bi-check-circle text-success"></i> Be respectful and collaborative
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- License -->
+
+    <section id="license" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">📄 License</h2>
+            <div class="card">
+                <div class="card-body text-center">
+                    <i class="bi bi-file-text feature-icon"></i>
+                    <p class="fs-5">This project is licensed under the terms of the <a href="/LICENSE"
+                            class="text-decoration-none">LICENSE</a> file.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Author Side-by-Side -->
+    <section id="contact-author" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title"><i class="bi bi-envelope-fill"></i> Contact &nbsp; <i
+                    class="bi bi-person-badge-fill"></i> Author</h2>
+            <p class="lead">Have a question or a project? Send a message and we'll get back to you.</p>
+            <div class="row justify-content-center align-items-stretch">
+                <!-- Contact Form (Left) -->
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <form id="contactForm" novalidate>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                    <div class="invalid-feedback">Please enter your name.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Phone</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                                    <div class="invalid-feedback">Please enter your phone number.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <select class="form-control" id="subject" name="subject" required>
+                                        <option value="">Select a subject</option>
+                                        <option value="General Inquiry">General Inquiry</option>
+                                        <option value="Support">Support</option>
+                                        <option value="Bug Report">Bug Report</option>
+                                        <option value="Feature Request">Feature Request</option>
+                                        <option value="Partnership">Partnership</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select a subject.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" name="message" rows="5"
+                                        required></textarea>
+                                    <div class="invalid-feedback">Please enter a message.</div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">
+                                        All fields required. Messages will be sent to
+                                        <a href="mailto:projects@spyberpolymath.com" class="text-decoration-underline"
+                                            target="_blank">
+                                            <strong>projects@spyberpolymath.com</strong>
+                                        </a>.
+                                    </small>
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="bi bi-send-fill"></i> Send
+                                    </button>
+                                </div>
+                            </form>
+                            <div id="contactAlert" class="alert mt-3 d-none" role="alert"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Author Card (Right) -->
+                <div class="col-lg-6">
+                    <div class="card feature-card h-100">
+                        <div class="card-body text-center d-flex flex-column justify-content-center">
+                            <div class="mb-4">
+                                <i class="bi bi-person-circle"
+                                    style="font-size: 5rem; color: var(--primary-color);"></i>
+                            </div>
+                            <h3 class="mb-3">Aman Anil</h3>
+                            <p class="lead mb-4">Full Stack Developer & Real Estate Platform Architect</p>
+                            <div class="social-links mb-3" style="color: var(--primary-color);">
+                                <a href="https://linkedin.com/in/spyberpolymath" title="LinkedIn"
+                                    style="color: var(--primary-color);">
+                                    <i class="bi bi-linkedin"></i>
+                                </a>
+                                <a href="https://github.com/spyberpolymath" title="GitHub"
+                                    style="color: var(--primary-color);">
+                                    <i class="bi bi-github"></i>
+                                </a>
+                                <a href="https://x.com/spyberpolymath" title="Twitter"
+                                    style="color: var(--primary-color);">
+                                    <i class="bi bi-twitter-x"></i>
+                                </a>
+                                <a href="https://spyberpolymath.com" title="Portfolio"
+                                    style="color: var(--primary-color);">
+                                    <i class="bi bi-globe"></i>
+                                </a>
+                            </div>
+                            <hr class="my-4">
+                            <p class="text-muted mb-0"><strong>Made with ❤️ and Python by Aman Anil</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="bi bi-house-door-fill"></i> hometri.com</h5>
+                    <p>A comprehensive real estate platform built with Django. Managing agents, listings, teams, and
+                        users with excellence.</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#overview" class="text-white text-decoration-none">Project Overview</a></li>
+                        <li><a href="#features" class="text-white text-decoration-none">Features</a></li>
+                        <li><a href="#installation" class="text-white text-decoration-none">Installation</a></li>
+                        <li><a href="#configuration" class="text-white text-decoration-none">Configuration</a></li>
+                        <li><a href="#contributing" class="text-white text-decoration-none">Contributing</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Connect</h5>
+                    <div class="social-links">
+                        <a href="https://github.com/spyberpolymath/hometri.com"><i class="bi bi-github"></i></a>
+                        <a href="https://linkedin.com/in/spyberpolymath"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://x.com/spyberpolymath"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255,255,255,0.1);">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 hometri.com. All rights reserved. Built with <i
+                        class="bi bi-heart-fill text-danger"></i> by Aman Anil</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn btn-primary position-fixed bottom-0 end-0 m-4"
+        style="display: none; z-index: 1000; border-radius: 50%; width: 50px; height: 50px;">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Active nav link on scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section[id]');
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+    <script>
+        // Contact form handler: validate and open user's email client with a prefilled mailto: to projects@spyberpolymath.com
+        (function () {
+            const form = document.getElementById('contactForm');
+            const alertBox = document.getElementById('contactAlert');
+            const toEmail = 'projects@spyberpolymath.com';
+
+            function showAlert(message, type = 'success') {
+                alertBox.className = 'alert mt-3';
+                alertBox.classList.add(type === 'success' ? 'alert-success' : 'alert-danger');
+                alertBox.textContent = message;
+                alertBox.classList.remove('d-none');
+            }
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // Bootstrap validation styling
+                if (!form.checkValidity()) {
+                    form.classList.add('was-validated');
+                    showAlert('Please fix the errors in the form and try again.', 'error');
+                    return;
+                }
+
+                const name = encodeURIComponent(document.getElementById('name').value.trim());
+                const email = encodeURIComponent(document.getElementById('email').value.trim());
+                const phone = encodeURIComponent(document.getElementById('phone').value.trim());
+                const selectedSubject = document.getElementById('subject').value;
+                const subject = encodeURIComponent('Hometri.com: ' + selectedSubject + ' - Contact from ' + decodeURIComponent(name));
+                const message = encodeURIComponent(document.getElementById('message').value.trim());
+
+                const bodyLines = [
+                    'Name: ' + decodeURIComponent(name),
+                    'Email: ' + decodeURIComponent(email),
+                    'Phone: ' + decodeURIComponent(phone),
+                    'Subject: ' + decodeURIComponent(selectedSubject),
+                    '',
+                    decodeURIComponent(message)
+                ];
+                const body = encodeURIComponent(bodyLines.join('\n'));
+
+                // Construct mailto link
+                const mailto = `mailto:${toEmail}?subject=${subject}&body=${body}`;
+
+                // Try opening the user's mail client. This will not send automatically but opens compose window.
+                window.location.href = mailto;
+
+                showAlert('Your email client should open with a prefilled message — send when ready.', 'success');
+                form.reset();
+                form.classList.remove('was-validated');
+            });
+        })();
+    </script>
+    <script>
+        // Simple client-side search: scrolls to section if found by id or title
+        document.getElementById('navbarSearchForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const query = document.getElementById('navbarSearchInput').value.trim().toLowerCase();
+            if (!query) return;
+
+            // Search by section id or section-title text
+            let found = false;
+            document.querySelectorAll('section[id]').forEach(section => {
+                const id = section.id.toLowerCase();
+                const title = section.querySelector('.section-title, h2');
+                const text = title ? title.textContent.toLowerCase() : '';
+                if (id.includes(query) || text.includes(query)) {
+                    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    found = true;
+                }
+            });
+
+            // If not found, show alert
+            if (!found) {
+                alert('No matching section found.');
+            }
+        });
+    </script>
+</body>
+
+</html>
