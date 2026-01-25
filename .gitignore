@@ -1,0 +1,18 @@
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+# Django migrations
+migrations/
+*/migrations/
+__pycache__/
+*/__pycache__/
+
+# Static files
+staticfiles/

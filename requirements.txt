@@ -1,0 +1,7 @@
+Django
+dj-database-url
+django-filter
+Pillow
+sqlparse
+whitenoise
+psycopg2-binary

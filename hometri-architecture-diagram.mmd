@@ -1,0 +1,55 @@
+%%{ init: { "theme": "neutral" } }%%
+
+graph TD
+
+    A[👤 User Request] --> B[🌐 server/urls.py]
+
+    B --> C1[📁 agents/urls.py]
+    B --> C2[📁 hometri/urls.py]
+    B --> C3[📁 team/urls.py]
+    B --> C4[📁 users/urls.py]
+
+    C1 --> D1[🧠 agents/views.py]
+    C2 --> D2[🧠 hometri/views.py]
+    C3 --> D3[🧠 team/views.py]
+    C4 --> D4[🧠 users/views.py]
+
+    D1 --> E1[🗃️ agents/models.py]
+    D2 --> E2[🗃️ hometri/models.py]
+    D3 --> E3[🗃️ team/models.py]
+    D4 --> E4[🗃️ users/models.py]
+
+    E1 --> G1[(💾 db.sqlite3)]
+    E2 --> G1
+    E3 --> G1
+    E4 --> G1
+
+    E1 --> G2[(🐘 PostgreSQL)]
+    E2 --> G2
+    E3 --> G2
+    E4 --> G2
+
+    E1 --> F1[🖼️ agents/templates/]
+    E2 --> F2[🖼️ hometri/templates/]
+    E3 --> F3[🖼️ team/templates/]
+    E4 --> F4[🖼️ users/templates/]
+
+    B --> H1[📦 static/]
+    B --> H2[🖇️ media/]
+
+    classDef urls fill:#E3F2FD,stroke:#2196F3,stroke-width:1px;
+    classDef views fill:#FFF3E0,stroke:#FF9800,stroke-width:1px;
+    classDef models fill:#E8F5E9,stroke:#4CAF50,stroke-width:1px;
+    classDef templates fill:#F3E5F5,stroke:#9C27B0,stroke-width:1px;
+    classDef database fill:#E0F7FA,stroke:#0288D1,stroke-width:2px;
+    classDef static fill:#ECEFF1,stroke:#607D8B;
+    classDef request fill:#FFEBEE,stroke:#D32F2F;
+
+    class A request;
+    class B,C1,C2,C3,C4 urls;
+    class D1,D2,D3,D4 views;
+    class E1,E2,E3,E4 models;
+    class F1,F2,F3,F4 templates;
+    class G1,G2 database;
+    class H1,H2 static;
+
