@@ -362,196 +362,196 @@ Showcase the application with project screenshots. All images are from the `/ima
 
 ### 📸 Project Demo Overview
 
-![Project Demo](../hometri.com/main/imagesdemo.png)
+![Project Demo](images/demo.png)
 *Project demo overview*
 
 ---
 
 ### 🏠 Home Page
 
-![Home Page 1](../hometri.com/main/imageshome/1.png)
-![Home Page 2](../hometri.com/main/imageshome/2.png)
-![Home Page 3](../hometri.com/main/imageshome/3.png)
-![Home Page 4](../hometri.com/main/imageshome/4.png)
-![Home Page 5](../hometri.com/main/imageshome/5.png)
-![Home Page 6](../hometri.com/main/imageshome/6.png)
-![Home Page 7](../hometri.com/main/imageshome/7.png)
+![Home Page 1](images/home/1.png)
+![Home Page 2](images/home/2.png)
+![Home Page 3](images/home/3.png)
+![Home Page 4](images/home/4.png)
+![Home Page 5](images/home/5.png)
+![Home Page 6](images/home/6.png)
+![Home Page 7](images/home/7.png)
 
 ---
 
 ### 📖 About Page
 
-![About Page 1](../hometri.com/main/imagesabout/1.png)
-![About Page 2](../hometri.com/main/imagesabout/2.png)
-![About Page 3](../hometri.com/main/imagesabout/3.png)
-![About Page 4](../hometri.com/main/imagesabout/4.png)
-![About Page 5](../hometri.com/main/imagesabout/5.png)
-![About Page 6](../hometri.com/main/imagesabout/6.png)
-![About Page 7](../hometri.com/main/imagesabout/7.png)
+![About Page 1](images/about/1.png)
+![About Page 2](images/about/2.png)
+![About Page 3](images/about/3.png)
+![About Page 4](images/about/4.png)
+![About Page 5](images/about/5.png)
+![About Page 6](images/about/6.png)
+![About Page 7](images/about/7.png)
 
 ---
 
 ### 🔧 Admin Panel
 
-![Admin Panel 1](../hometri.com/main/imagesadmin/1.png)
-![Admin Panel 2](../hometri.com/main/imagesadmin/2.png)
-![Admin Panel 3](../hometri.com/main/imagesadmin/3.png)
-![Admin Panel 4](../hometri.com/main/imagesadmin/4.png)
-![Admin Panel 5](../hometri.com/main/imagesadmin/5.png)
-![Admin Panel 6](../hometri.com/main/imagesadmin/6.png)
-![Admin Panel 7](../hometri.com/main/imagesadmin/7.png)
-![Admin Panel 8](../hometri.com/main/imagesadmin/8.png)
-![Admin Panel 9](../hometri.com/main/imagesadmin/9.png)
-![Admin Panel 11](../hometri.com/main/imagesadmin/11.png)
-![Admin Panel 12](../hometri.com/main/imagesadmin/12.png)
-![Admin Panel 13](../hometri.com/main/imagesadmin/13.png)
-![Admin Panel 14](../hometri.com/main/imagesadmin/14.png)
+![Admin Panel 1](images/admin/1.png)
+![Admin Panel 2](images/admin/2.png)
+![Admin Panel 3](images/admin/3.png)
+![Admin Panel 4](images/admin/4.png)
+![Admin Panel 5](images/admin/5.png)
+![Admin Panel 6](images/admin/6.png)
+![Admin Panel 7](images/admin/7.png)
+![Admin Panel 8](images/admin/8.png)
+![Admin Panel 9](images/admin/9.png)
+![Admin Panel 11](images/admin/11.png)
+![Admin Panel 12](images/admin/12.png)
+![Admin Panel 13](images/admin/13.png)
+![Admin Panel 14](images/admin/14.png)
 
 ---
 
 ### 🏢 Hometri Admin
 
-![Hometri Admin 1](../hometri.com/main/imagesHometri-admin/1.png)
-![Hometri Admin 2](../hometri.com/main/imagesHometri-admin/2.png)
-![Hometri Admin 3](../hometri.com/main/imagesHometri-admin/3.png)
-![Hometri Admin 4](../hometri.com/main/imagesHometri-admin/4.png)
-![Hometri Admin 5](../hometri.com/main/imagesHometri-admin/5.png)
-![Hometri Admin 6](../hometri.com/main/imagesHometri-admin/6.png)
-![Hometri Admin 7](../hometri.com/main/imagesHometri-admin/7.png)
-![Hometri Admin 8](../hometri.com/main/imagesHometri-admin/8.png)
+![Hometri Admin 1](images/Hometri-admin/1.png)
+![Hometri Admin 2](images/Hometri-admin/2.png)
+![Hometri Admin 3](images/Hometri-admin/3.png)
+![Hometri Admin 4](images/Hometri-admin/4.png)
+![Hometri Admin 5](images/Hometri-admin/5.png)
+![Hometri Admin 6](images/Hometri-admin/6.png)
+![Hometri Admin 7](images/Hometri-admin/7.png)
+![Hometri Admin 8](images/Hometri-admin/8.png)
 
 ---
 
 ### 👥 Agents - Admin Side
 
-![Agents Admin 1](../hometri.com/main/imagesagents/admin-side/1.png)
-![Agents Admin 2](../hometri.com/main/imagesagents/admin-side/2.png)
-![Agents Admin 3](../hometri.com/main/imagesagents/admin-side/3.png)
-![Agents Admin 4](../hometri.com/main/imagesagents/admin-side/4.png)
-![Agents Admin 5](../hometri.com/main/imagesagents/admin-side/5.png)
-![Agents Admin 6](../hometri.com/main/imagesagents/admin-side/6.png)
-![Agents Admin 7](../hometri.com/main/imagesagents/admin-side/7.png)
-![Agents Admin 8](../hometri.com/main/imagesagents/admin-side/8.png)
-![Agents Admin 9](../hometri.com/main/imagesagents/admin-side/9.png)
-![Agents Admin 10](../hometri.com/main/imagesagents/admin-side/10.png)
-![Agents Admin 11](../hometri.com/main/imagesagents/admin-side/11.png)
-![Agents Admin 12](../hometri.com/main/imagesagents/admin-side/12.png)
-![Agents Admin 13](../hometri.com/main/imagesagents/admin-side/13.png)
-![Agents Admin 14](../hometri.com/main/imagesagents/admin-side/14.png)
-![Agents Admin 15](../hometri.com/main/imagesagents/admin-side/15.png)
-![Agents Admin 16](../hometri.com/main/imagesagents/admin-side/16.png)
-![Agents Admin 17](../hometri.com/main/imagesagents/admin-side/17.png)
-![Agents Admin 18](../hometri.com/main/imagesagents/admin-side/18.png)
+![Agents Admin 1](images/agents/admin-side/1.png)
+![Agents Admin 2](images/agents/admin-side/2.png)
+![Agents Admin 3](images/agents/admin-side/3.png)
+![Agents Admin 4](images/agents/admin-side/4.png)
+![Agents Admin 5](images/agents/admin-side/5.png)
+![Agents Admin 6](images/agents/admin-side/6.png)
+![Agents Admin 7](images/agents/admin-side/7.png)
+![Agents Admin 8](images/agents/admin-side/8.png)
+![Agents Admin 9](images/agents/admin-side/9.png)
+![Agents Admin 10](images/agents/admin-side/10.png)
+![Agents Admin 11](images/agents/admin-side/11.png)
+![Agents Admin 12](images/agents/admin-side/12.png)
+![Agents Admin 13](images/agents/admin-side/13.png)
+![Agents Admin 14](images/agents/admin-side/14.png)
+![Agents Admin 15](images/agents/admin-side/15.png)
+![Agents Admin 16](images/agents/admin-side/16.png)
+![Agents Admin 17](images/agents/admin-side/17.png)
+![Agents Admin 18](images/agents/admin-side/18.png)
 
 ---
 
 ### 👥 Agents - Client Side
 
-![Agents Client 1](../hometri.com/main/imagesagents/clinet-side/1.png)
-![Agents Client 2](../hometri.com/main/imagesagents/clinet-side/2.png)
-![Agents Client 3](../hometri.com/main/imagesagents/clinet-side/3.png)
-![Agents Client 4](../hometri.com/main/imagesagents/clinet-side/4.png)
-![Agents Client 5](../hometri.com/main/imagesagents/clinet-side/5.png)
-![Agents Client 6](../hometri.com/main/imagesagents/clinet-side/6.png)
-![Agents Client 7](../hometri.com/main/imagesagents/clinet-side/7.png)
-![Agents Client 8](../hometri.com/main/imagesagents/clinet-side/8.png)
-![Agents Client 9](../hometri.com/main/imagesagents/clinet-side/9.png)
-![Agents Client 10](../hometri.com/main/imagesagents/clinet-side/10.png)
-![Agents Client 11](../hometri.com/main/imagesagents/clinet-side/11.png)
+![Agents Client 1](images/agents/clinet-side/1.png)
+![Agents Client 2](images/agents/clinet-side/2.png)
+![Agents Client 3](images/agents/clinet-side/3.png)
+![Agents Client 4](images/agents/clinet-side/4.png)
+![Agents Client 5](images/agents/clinet-side/5.png)
+![Agents Client 6](images/agents/clinet-side/6.png)
+![Agents Client 7](images/agents/clinet-side/7.png)
+![Agents Client 8](images/agents/clinet-side/8.png)
+![Agents Client 9](images/agents/clinet-side/9.png)
+![Agents Client 10](images/agents/clinet-side/10.png)
+![Agents Client 11](images/agents/clinet-side/11.png)
 
 ---
 
 ### 📞 Contact - Admin Side
 
-![Contact Admin 1](../hometri.com/main/imagescontact/admin-side/1.png)
-![Contact Admin 2](../hometri.com/main/imagescontact/admin-side/2.png)
-![Contact Admin 3](../hometri.com/main/imagescontact/admin-side/3.png)
-![Contact Admin 4](../hometri.com/main/imagescontact/admin-side/4.png)
+![Contact Admin 1](images/contact/admin-side/1.png)
+![Contact Admin 2](images/contact/admin-side/2.png)
+![Contact Admin 3](images/contact/admin-side/3.png)
+![Contact Admin 4](images/contact/admin-side/4.png)
 
 ---
 
 ### 📞 Contact - Client Side
 
-![Contact Client 1](../hometri.com/main/imagescontact/clinet-side/1.png)
-![Contact Client 2](../hometri.com/main/imagescontact/clinet-side/2.png)
-![Contact Client 3](../hometri.com/main/imagescontact/clinet-side/3.png)
+![Contact Client 1](images/contact/clinet-side/1.png)
+![Contact Client 2](images/contact/clinet-side/2.png)
+![Contact Client 3](images/contact/clinet-side/3.png)
 
 ---
 
 ### 🏘️ Property - Admin Side
 
-![Property Admin 1](../hometri.com/main/imagesproperty/admin-side/1.png)
-![Property Admin 2](../hometri.com/main/imagesproperty/admin-side/2.png)
-![Property Admin 3](../hometri.com/main/imagesproperty/admin-side/3.png)
-![Property Admin 4](../hometri.com/main/imagesproperty/admin-side/4.png)
-![Property Admin 5](../hometri.com/main/imagesproperty/admin-side/5.png)
-![Property Admin 6](../hometri.com/main/imagesproperty/admin-side/6.png)
+![Property Admin 1](images/property/admin-side/1.png)
+![Property Admin 2](images/property/admin-side/2.png)
+![Property Admin 3](images/property/admin-side/3.png)
+![Property Admin 4](images/property/admin-side/4.png)
+![Property Admin 5](images/property/admin-side/5.png)
+![Property Admin 6](images/property/admin-side/6.png)
 
 ---
 
 ### 🏘️ Property - Client Side
 
-![Property Client 1](../hometri.com/main/imagesproperty/client-side/1.png)
-![Property Client 2](../hometri.com/main/imagesproperty/client-side/2.png)
-![Property Client 3](../hometri.com/main/imagesproperty/client-side/3.png)
-![Property Client 4](../hometri.com/main/imagesproperty/client-side/4.png)
-![Property Client 5](../hometri.com/main/imagesproperty/client-side/5.png)
-![Property Client 6](../hometri.com/main/imagesproperty/client-side/6.png)
-![Property Client 7](../hometri.com/main/imagesproperty/client-side/7.png)
+![Property Client 1](images/property/client-side/1.png)
+![Property Client 2](images/property/client-side/2.png)
+![Property Client 3](images/property/client-side/3.png)
+![Property Client 4](images/property/client-side/4.png)
+![Property Client 5](images/property/client-side/5.png)
+![Property Client 6](images/property/client-side/6.png)
+![Property Client 7](images/property/client-side/7.png)
 
 ---
 
 ### 🔍 Search Functionality
 
-![Search 1](../hometri.com/main/imagessearch/1.png)
-![Search 2](../hometri.com/main/imagessearch/2.png)
-![Search 3](../hometri.com/main/imagessearch/3.png)
+![Search 1](images/search/1.png)
+![Search 2](images/search/2.png)
+![Search 3](images/search/3.png)
 
 ---
 
 ### 🛠️ Services
 
-![Services 1](../hometri.com/main/imagesservices/1.png)
-![Services 2](../hometri.com/main/imagesservices/2.png)
-![Services 3](../hometri.com/main/imagesservices/3.png)
-![Services 4](../hometri.com/main/imagesservices/4.png)
-![Services 5](../hometri.com/main/imagesservices/5.png)
+![Services 1](images/services/1.png)
+![Services 2](images/services/2.png)
+![Services 3](images/services/3.png)
+![Services 4](images/services/4.png)
+![Services 5](images/services/5.png)
 
 ---
 
 ### 👨‍👩‍👧‍👦 Team - Admin Side
 
-![Team Admin 1](../hometri.com/main/imagesteam/admin-side/1.png)
-![Team Admin 2](../hometri.com/main/imagesteam/admin-side/2.png)
-![Team Admin 3](../hometri.com/main/imagesteam/admin-side/3.png)
-![Team Admin 4](../hometri.com/main/imagesteam/admin-side/4.png)
-![Team Admin 5](../hometri.com/main/imagesteam/admin-side/5.png)
-![Team Admin 6](../hometri.com/main/imagesteam/admin-side/6.png)
-![Team Admin 7](../hometri.com/main/imagesteam/admin-side/7.png)
-![Team Admin 8](../hometri.com/main/imagesteam/admin-side/8.png)
-![Team Admin 9](../hometri.com/main/imagesteam/admin-side/9.png)
-![Team Admin 10](../hometri.com/main/imagesteam/admin-side/10.png)
-![Team Admin 11](../hometri.com/main/imagesteam/admin-side/11.png)
-![Team Admin 12](../hometri.com/main/imagesteam/admin-side/12.png)
-![Team Admin 13](../hometri.com/main/imagesteam/admin-side/13.png)
-![Team Admin 14](../hometri.com/main/imagesteam/admin-side/14.png)
-![Team Admin 15](../hometri.com/main/imagesteam/admin-side/15.png)
-![Team Admin 16](../hometri.com/main/imagesteam/admin-side/16.png)
+![Team Admin 1](images/team/admin-side/1.png)
+![Team Admin 2](images/team/admin-side/2.png)
+![Team Admin 3](images/team/admin-side/3.png)
+![Team Admin 4](images/team/admin-side/4.png)
+![Team Admin 5](images/team/admin-side/5.png)
+![Team Admin 6](images/team/admin-side/6.png)
+![Team Admin 7](images/team/admin-side/7.png)
+![Team Admin 8](images/team/admin-side/8.png)
+![Team Admin 9](images/team/admin-side/9.png)
+![Team Admin 10](images/team/admin-side/10.png)
+![Team Admin 11](images/team/admin-side/11.png)
+![Team Admin 12](images/team/admin-side/12.png)
+![Team Admin 13](images/team/admin-side/13.png)
+![Team Admin 14](images/team/admin-side/14.png)
+![Team Admin 15](images/team/admin-side/15.png)
+![Team Admin 16](images/team/admin-side/16.png)
 
 ---
 
 ### 👨‍👩‍👧‍👦 Team - Client Side
 
-![Team Client 1](../hometri.com/main/imagesteam/clinet-side/1.png)
-![Team Client 2](../hometri.com/main/imagesteam/clinet-side/2.png)
-![Team Client 3](../hometri.com/main/imagesteam/clinet-side/3.png)
-![Team Client 4](../hometri.com/main/imagesteam/clinet-side/4.png)
-![Team Client 5](../hometri.com/main/imagesteam/clinet-side/5.png)
-![Team Client 6](../hometri.com/main/imagesteam/clinet-side/6.png)
-![Team Client 7](../hometri.com/main/imagesteam/clinet-side/7.png)
-![Team Client 8](../hometri.com/main/imagesteam/clinet-side/8.png)
-![Team Client 9](../hometri.com/main/imagesteam/clinet-side/9.png)
-![Team Client 10](../hometri.com/main/imagesteam/clinet-side/10.png)
+![Team Client 1](images/team/clinet-side/1.png)
+![Team Client 2](images/team/clinet-side/2.png)
+![Team Client 3](images/team/clinet-side/3.png)
+![Team Client 4](images/team/clinet-side/4.png)
+![Team Client 5](images/team/clinet-side/5.png)
+![Team Client 6](images/team/clinet-side/6.png)
+![Team Client 7](images/team/clinet-side/7.png)
+![Team Client 8](images/team/clinet-side/8.png)
+![Team Client 9](images/team/clinet-side/9.png)
+![Team Client 10](images/team/clinet-side/10.png)
 
 ---
 
