@@ -674,10 +674,9 @@ This project is licensed under the terms of the [LICENSE](LICENSE) file.
 ### **Aman Anil**
 
 💼 LinkedIn: [linkedin.com/in/spyberpolymath](https://linkedin.com/in/spyberpolymath)  
-💻 GitHub: [@spyberpolymath](https://github.com/spyberpolymath)  
-🐦 Twitter (X): [@spyberpolymath](https://x.com/spyberpolymath)  
+💻 GitHub: [@spyberpolymath](https://github.com/spyberpolymath)
 🌐 Portfolio: [spyberpolymath.com](https://spyberpolymath.com)  
-📧 Email: [projects@spyberpolymath.com](mailto:projects@spyberpolymath.com)
+📧 Email: [aman@spyberpolymath.com](mailto:aman@spyberpolymath.com)
 
 **Made with ❤️ and Python by Aman Anil**
 
